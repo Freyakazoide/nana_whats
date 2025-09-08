@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Links | Ilha Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <img src="ilhadigital.jfif" alt="Logo Ilha Digital">
+                <span>Ilha Digital</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link active">📝 Gerador</a></li>
+                <li><a href="/historico" class="nav-link">📈 Histórico</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <header class="page-header">
+            <h1>Gerador de Contatos WhatsApp</h1>
+            <p>Cole os dados, gere os links e envie as mensagens de forma rápida e segura.</p>
+        </header>
+
+        <div class="content-layout">
+            <section class="card">
+                <h2>1. Cole os dados da planilha</h2>
+                <p class="subtitle">Copie as colunas: Telefone, Nome, Documento, Produto e Validade.</p>
+                <textarea id="inputText" placeholder="Ex: 48999998888	FULANO DE TAL..."></textarea>
+                <button id="generateBtn">Gerar Links</button>
+            </section>
+
+            <section class="card">
+                <h2>2. Envie as mensagens</h2>
+                <div id="linksContainer">
+                    <p class="placeholder">Aguardando dados para gerar os links...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ilha Digital. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="gerador.js"></script>
+</body>
+</html>
