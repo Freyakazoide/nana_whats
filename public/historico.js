@@ -92,14 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     historyTableBody.addEventListener('click', (event) => {
-        // *** MUDANÇA IMPORTANTE AQUI ***
-        // Usamos .closest() para garantir que pegamos o botão, mesmo que o clique seja no ícone dentro dele.
-        const deleteButton = event.target.closest('.delete-btn');
-        if (deleteButton) {
-            const id = deleteButton.dataset.id;
-            openModal(id);
-        }
-    });
+    console.log('--- CLIQUE DETECTADO NA TABELA ---');
+    console.log('Elemento exato que foi clicado:', event.target);
+
+    const deleteButton = event.target.closest('.delete-btn');
+    console.log('Resultado da busca pelo botão (.delete-btn):', deleteButton);
+
+    if (deleteButton) {
+        console.log('Botão de deletar encontrado! Tentando abrir o modal.');
+        const id = deleteButton.dataset.id;
+        openModal(id);
+    } else {
+        console.log('Botão de deletar NÃO foi encontrado a partir do clique.');
+    }
+});
 
     cancelDeleteBtn.addEventListener('click', closeModal);
     confirmDeleteBtn.addEventListener('click', () => {
